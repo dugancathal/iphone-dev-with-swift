@@ -37,30 +37,19 @@ class ViewController: UIViewController {
     }
     @IBAction func toggleControlls(sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
-            leftSwitch.hidden = false
-            rightSwitch.hidden = false
+            (leftSwitch.hidden, rightSwitch.hidden) = (false, false)
             doSomethingButton.hidden = true
         } else {
-            leftSwitch.hidden = true
-            rightSwitch.hidden = true
+            (leftSwitch.hidden, rightSwitch.hidden) = (true, true)
             doSomethingButton.hidden = false
         }
     }
     
     @IBAction func doSomething(sender: UIButton) {
-        let controller = UIAlertController(title: "Are you sure?", message: "This might be dangerous", preferredStyle: .ActionSheet)
-        let yesAction = UIAlertAction(title: "Yes, I'm sure!",
-            style: .Destructive, handler: { action in
-                let name = self.nameField.text.isEmpty ? "" : "\(self.nameField.text), "
-                let message = "You can breathe easy, \(name)everything went OK."
-                let controller2 = UIAlertController(title: "Something was done", message: message, preferredStyle: .Alert)
-                let cancelAction = UIAlertAction(title: "Phew!", style: .Cancel, handler: nil)
-                controller2.addAction(cancelAction)
-                self.presentViewController(controller2, animated: true, completion: nil)
-        })
-        let noAction = UIAlertAction(title: "No way!", style: .Cancel, handler: nil)
-        controller.addAction(yesAction)
-        controller.addAction(noAction)
+        let controller = UIAlertController(title: "Are you sure?", message: nil, preferredStyle: .ActionSheet)
+        
+        controller.addAction(UIAlertAction(title: "Yes, I'm sure!", style: .Destructive, handler: onYesActionSelected))
+        controller.addAction(UIAlertAction(title: "No way!", style: .Cancel, handler: nil))
         
         if let ppc = controller.popoverPresentationController {
             ppc.sourceView = sender
@@ -69,6 +58,17 @@ class ViewController: UIViewController {
         presentViewController(controller, animated: true, completion: nil)
     }
     
+    func onYesActionSelected(action: UIAlertAction!) -> Void {
+        let controller2 = UIAlertController(title: "Something was done", message: everythingIsOkayMessage(), preferredStyle: .Alert)
+        let cancelAction = UIAlertAction(title: "Phew!", style: .Cancel, handler: nil)
+        controller2.addAction(cancelAction)
+        self.presentViewController(controller2, animated: true, completion: nil)
+    }
+    
+    func everythingIsOkayMessage() -> String {
+        let name = self.nameField.text.isEmpty ? "" : "\(self.nameField.text), "
+        return "You can breathe easy, \(name)everything went OK."
+    }
     
     @IBAction func backgroundTap(sender: UIControl) {
         nameField.resignFirstResponder()
