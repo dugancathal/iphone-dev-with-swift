@@ -22,6 +22,12 @@ Basic user interaction using buttons and labels. Includes a brief tutorial on Ac
 
 ## Chapter 4 - SO MANY CONTROLS
 
-Don't ever do this at home (puts a slew of controls on the screen). Shows how to configure keyboard types and keyboard control release.
+Don't ever do this at home (this chapter puts a slew of controls on the screen). Shows how to configure keyboard types and keyboard control release.
 
 [Source Code](control-fun)
+
+## Chapter 5 - Contraints, Points, and Pixels, OH MY
+
+Constraints for multiple screen sizes, and how to evenly spread things across a screen.
+
+[Source Code](restructure)
