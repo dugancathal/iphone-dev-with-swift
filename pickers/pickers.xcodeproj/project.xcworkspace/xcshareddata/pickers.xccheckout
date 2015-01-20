@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>416DC46E-1AA2-4338-9A92-06B05F3C959C</string>
+	<key>IDESourceControlProjectName</key>
+	<string>pickers</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>C86E6E1039E4D7F3F2AA68C78EAA5E8A20A07BDD</key>
+		<string>github.com:dugancathal/iphone-dev-with-swift.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>pickers/pickers.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>C86E6E1039E4D7F3F2AA68C78EAA5E8A20A07BDD</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:dugancathal/iphone-dev-with-swift.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>C86E6E1039E4D7F3F2AA68C78EAA5E8A20A07BDD</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C86E6E1039E4D7F3F2AA68C78EAA5E8A20A07BDD</string>
+			<key>IDESourceControlWCCName</key>
+			<string>iphone-dev-with-swift</string>
+		</dict>
+	</array>
+</dict>
+</plist>
